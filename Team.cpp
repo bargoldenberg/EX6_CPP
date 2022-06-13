@@ -1,0 +1,38 @@
+#pragma once
+#include "Team.hpp"
+#include <iostream>
+#include <vector>
+
+using namespace std;
+using namespace ex6;
+
+ex6::Team::Team(string name, double Talent) {
+    this->name = name;
+    if(Talent<0||Talent>1){
+        throw invalid_argument("Talent must be a number between 0 and 1");
+    }
+    this->Talent = Talent;
+    this->score=0;
+}
+
+ex6::Team::Team() {
+    this->name = "";
+    this->Talent = 0;
+    this->score=0;
+}
+
+string ex6::Team::getName(){
+    return this->name;
+}
+
+double ex6::Team::getTalent(){
+    return this->Talent;
+}
+
+void ex6::Team::setScore(){
+    this->score++;
+}
+
+int ex6::Team::getScore(){
+    return this->score;
+}
