@@ -9,12 +9,16 @@ namespace ex6{
         string name;
         double Talent;
         int score;
+        int dunkdon;
+        vector<int> gameswon;
+        vector<int> gamesloss;
     public:
         Team();
         Team(string name, double Talent);
         string getName();
         double getTalent();
-        void setScore();
+        void setWin(int win);
+        void setLoss(int loss);
         int getScore();
     };
 }

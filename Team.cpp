@@ -13,6 +13,7 @@ ex6::Team::Team(string name, double Talent) {
     }
     this->Talent = Talent;
     this->score=0;
+    this->dunkdon=0;
 }
 
 ex6::Team::Team() {
@@ -29,8 +30,14 @@ double ex6::Team::getTalent(){
     return this->Talent;
 }
 
-void ex6::Team::setScore(){
-    this->score++;
+void ex6::Team::setWin(int win){
+    this->gameswon.push_back(win);
+    this->score+=win;
+}
+
+void ex6::Team::setLoss(int loss){
+    this->gamesloss.push_back(loss);
+    this->dunkdon+=loss;
 }
 
 int ex6::Team::getScore(){

@@ -5,11 +5,12 @@
 namespace ex6{
     class Game{
     private:
-        Team* team1;
-        Team* team2;
+        Team* Home;
+        Team* Away;
     public:
         Game(Team& team1, Team& team2);
+        Game();
         ~Game();
-        void play();
+        int play();
     };
 }
